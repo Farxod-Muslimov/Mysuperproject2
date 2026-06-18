@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Python Flask</title>
+
+    <script>
+
+        const sizes = [0, 1, 2, 4, 8, 10, 12];
+
+        let pos = 0;
+        let direction = 1;
+
+        function Elastic() {
+
+            const el = document.getElementById("elastic");
+
+            el.style.letterSpacing = sizes[pos] + "px";
+
+            pos += direction;
+
+            if (pos >= sizes.length - 1 || pos <= 0) {
+                direction *= -1;
+            }
+
+            setTimeout(Elastic, 100);
+        }
+
+    </script>
+
+</head>
+
+<body style="background-color:black;" onload="Elastic()">
+
+<center>
+
+    <h2 style="color:white;">
+        Hello from
+        <span style="color:yellow;">Farxod Muslimov!</span>
+        <br>
+        Welcome to Python Flask Web Page!
+    </h2>
+
+    <h1 id="elastic" style="color:red;">
+        Python Flask = REALxyz!
+    </h1>
+
+</center>
+
+</body>
+</html>
